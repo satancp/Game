@@ -1,0 +1,17 @@
+PODS:
+  - Socket.IO-Client-Swift (8.2.0)
+  - SQLite.swift (0.11.2):
+    - SQLite.swift/standard (= 0.11.2)
+  - SQLite.swift/standard (0.11.2)
+
+DEPENDENCIES:
+  - Socket.IO-Client-Swift
+  - SQLite.swift
+
+SPEC CHECKSUMS:
+  Socket.IO-Client-Swift: 900cf511777045c80d1ce1f11f71261e87765dd1
+  SQLite.swift: 670c3e9e0a806bbfd56a3de5d530768dc0e6fe7c
+
+PODFILE CHECKSUM: 8072f4e4d4fdc6d042a042d8c718996b330ead7b
+
+COCOAPODS: 1.2.0

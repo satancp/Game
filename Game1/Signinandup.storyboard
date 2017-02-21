@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9H8-a4-15A">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--设置性别-->
+        <scene sceneID="XcF-Uc-Zz9">
+            <objects>
+                <viewController title="设置性别" id="kAe-xu-X9z" customClass="SignupViewController" customModule="Game1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X5e-2F-1zX"/>
+                        <viewControllerLayoutGuide type="bottom" id="JF2-2t-RiS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="REB-x5-qTm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="female" translatesAutoresizingMaskIntoConstraints="NO" id="I8A-H1-2ss">
+                                <rect key="frame" x="220" y="276" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="你的性别是？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Cr-BL-zP5">
+                                <rect key="frame" x="16" y="235" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99071782090000005" green="1" blue="0.1601914462" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="male" translatesAutoresizingMaskIntoConstraints="NO" id="YZ8-ER-1U1">
+                                <rect key="frame" x="27" y="276" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHt-dm-KVG">
+                                <rect key="frame" x="68" y="412" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="侠客"/>
+                                <connections>
+                                    <action selector="setSex1:" destination="kAe-xu-X9z" eventType="touchDown" id="oYm-FR-i6q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIi-ki-NxH">
+                                <rect key="frame" x="261" y="412" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="侠女"/>
+                                <connections>
+                                    <action selector="setSex2:" destination="kAe-xu-X9z" eventType="touchDown" id="B4w-FE-w2f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="设置性别" id="D9g-ZU-E6x"/>
+                    <connections>
+                        <outlet property="sexImage1" destination="YZ8-ER-1U1" id="Ck3-xj-23w"/>
+                        <outlet property="sexImage2" destination="I8A-H1-2ss" id="IQp-Rs-h8s"/>
+                        <segue destination="VUG-zb-hXU" kind="show" identifier="gettoSignup2" id="ih5-Xv-vzh"/>
+                        <segue destination="xg0-sI-9nK" kind="showDetail" identifier="startGame" id="iHL-qW-WyR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xpj-qf-ImL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="-186.65667166416793"/>
+        </scene>
+        <!--设置名字-->
+        <scene sceneID="j1d-gS-k1l">
+            <objects>
+                <viewController title="设置名字" id="VUG-zb-hXU" customClass="SignupViewController" customModule="Game1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9sk-Qj-cGo"/>
+                        <viewControllerLayoutGuide type="bottom" id="kQu-vp-RRF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pNT-Gz-XIG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="你的名字是？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jeg-45-eop">
+                                <rect key="frame" x="16" y="235" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99071782093707461" green="1" blue="0.16019144623832759" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="oge-14-Xq1">
+                                <rect key="frame" x="16" y="264" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfk-tT-Kzt">
+                                <rect key="frame" x="164" y="302" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="下一步">
+                                    <color key="titleColor" red="0.54397954579999996" green="0.76908800180000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="setName:" destination="VUG-zb-hXU" eventType="touchDown" id="x1u-Ut-hhE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameText" destination="oge-14-Xq1" id="GR8-u4-XyI"/>
+                        <segue destination="kJR-5q-zGs" kind="show" identifier="gettoSignup3" id="8yr-Xf-ppC"/>
+                        <segue destination="xg0-sI-9nK" kind="showDetail" identifier="startGame" id="qYQ-9a-FY9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0x-yx-eLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1357.5999999999999" y="-187.55622188905548"/>
+        </scene>
+        <!--设置家世-->
+        <scene sceneID="wLL-FY-2Z2">
+            <objects>
+                <viewController title="设置家世" id="kJR-5q-zGs" customClass="SignupViewController" customModule="Game1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tfo-Er-Lvf"/>
+                        <viewControllerLayoutGuide type="bottom" id="kha-Rv-qIq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gea-DL-8NA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVF-Bq-Uoh">
+                                <rect key="frame" x="16" y="378" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="你出生在一个文学世家，通晓典籍"/>
+                                <connections>
+                                    <action selector="setOrigin4:" destination="kJR-5q-zGs" eventType="touchDown" id="nsI-fa-SZd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ys-WD-bnL">
+                                <rect key="frame" x="16" y="340" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="你出生在一个商贾之家，锦衣玉食，不知世间疾苦"/>
+                                <connections>
+                                    <action selector="setOrigin3:" destination="kJR-5q-zGs" eventType="touchDown" id="FIz-s5-mxd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K83-1T-oJu">
+                                <rect key="frame" x="16" y="302" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="你自幼便无父无母，孤苦伶仃"/>
+                                <connections>
+                                    <action selector="setOrigin2:" destination="kJR-5q-zGs" eventType="touchDown" id="D1h-C8-qNW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="你的身世是？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIe-ha-yhF">
+                                <rect key="frame" x="16" y="235" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99071782090000005" green="1" blue="0.1601914462" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9An-Au-oF1">
+                                <rect key="frame" x="16" y="264" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="你出生在一个武学世家，拥有良好的根基"/>
+                                <connections>
+                                    <action selector="setOrigin1:" destination="kJR-5q-zGs" eventType="touchDown" id="VfE-mu-dx5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ang-14-Lui">
+                                <rect key="frame" x="16" y="416" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="你是天帝的子孙，世间万物信手拈来"/>
+                                <connections>
+                                    <action selector="setOrigin5:" destination="kJR-5q-zGs" eventType="touchDown" id="qzJ-NP-d0a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="2hP-lu-Vk3" kind="show" identifier="gettoSignup4" id="Ytu-Yw-Ypv"/>
+                        <segue destination="xg0-sI-9nK" kind="showDetail" identifier="startGame" id="ceZ-pB-cJQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vcl-Rm-Oga" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2080.8000000000002" y="-188.45577211394306"/>
+        </scene>
+        <!--Signup View Controller-->
+        <scene sceneID="5Cw-46-9ux">
+            <objects>
+                <viewController id="2hP-lu-Vk3" customClass="SignupViewController" customModule="Game1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b4L-UE-ueZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="qdr-mr-u5l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="08K-3d-d2z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="你的身世" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Um1-N1-HRk">
+                                <rect key="frame" x="16" y="379" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99071782090000005" green="1" blue="0.1601914462" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="sex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="em6-GK-Ew5">
+                                <rect key="frame" x="16" y="350" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.54397954579999996" green="0.76908800180000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="你的性别" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Lv-jo-ibW">
+                                <rect key="frame" x="16" y="321" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99071782090000005" green="1" blue="0.1601914462" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="你的名字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfM-lp-Wou">
+                                <rect key="frame" x="16" y="263" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99071782090000005" green="1" blue="0.1601914462" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KM-6p-3e1">
+                                <rect key="frame" x="16" y="292" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.54397954579999996" green="0.76908800180000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zsw-E8-3F9">
+                                <rect key="frame" x="132" y="536" width="112" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.32802253501344414" green="0.39330631393108251" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="sword">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="开始冒险">
+                                            <attributes>
+                                                <color key="NSColor" red="0.79930218149377974" green="1" blue="0.04695324830425629" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name=".PingFangSC-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="startGame:" destination="2hP-lu-Vk3" eventType="touchDown" id="suF-GR-Knh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="origin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kl-Mw-iul">
+                                <rect key="frame" x="16" y="408" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.54397954579999996" green="0.76908800180000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameDisplay" destination="1KM-6p-3e1" id="7ii-Td-qCK"/>
+                        <outlet property="originDisplay" destination="2kl-Mw-iul" id="Cmk-fz-TC7"/>
+                        <outlet property="sexDisplay" destination="em6-GK-Ew5" id="pKL-vj-iwN"/>
+                        <segue destination="xg0-sI-9nK" kind="showDetail" identifier="startGame" id="c5b-bi-pou"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cj0-7x-Ofj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2820" y="-187.55622188905548"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QvQ-jc-pkH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9H8-a4-15A" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="35H-J7-dtj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kAe-xu-X9z" kind="relationship" relationship="rootViewController" id="kQq-Kf-miX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cgc-zx-U3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-311.19999999999999" y="-186.65667166416793"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="16T-Ik-laz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="xg0-sI-9nK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wFP-oe-rAp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="female" width="256" height="256"/>
+        <image name="male" width="256" height="256"/>
+        <image name="sword" width="50" height="50"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="c5b-bi-pou"/>
+    </inferredMetricsTieBreakers>
+</document>
